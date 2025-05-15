@@ -10,4 +10,6 @@ urlpatterns = [
     path('conversations/', views.get_user_conversations, name='get_user_conversations'),
     path('conversations/<int:pk>/delete/', views.delete_user_conversation, name='delete-user-conversation'),
     path('conversations/<int:pk>/', views.open_user_conversation, name='open-user-conversation'),
+    path('messages/', views.add_message_to_conversation),
+    path('conversations/<int:conversation_id>/update-title/', views.update_conversation_title, name='update_conversation_title'),
 ]
